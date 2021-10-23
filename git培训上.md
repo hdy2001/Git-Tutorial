@@ -25,6 +25,8 @@
 
 以上问题除了第五条外，**均可通过百度、谷歌或者请教同学**获得答案。
 
+（关于Git和GitHub的介绍，如果你想浅显的了解，我会建议你去看看廖雪峰老师的网站，说的很清楚。如果你是顶尖大佬，可以自行翻翻CSDN和一些书籍给自己一个满意的回答）
+
 ## Git介绍
 
 **建议查阅维基百科给出相应解释**：https://en.wikipedia.org/wiki/Git
@@ -35,17 +37,25 @@
 
 或者 https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496
 
+在使用教程之前，不妨先看看自己有没有在某个时候不小心已经安装了git了：
+
+在命令行输入$ git, 如果你已经安装过了，就直接跳到工作流程部分吧！
+
 ### Windows安装Git
 
+直接利用Git官网的下载链接：https://git-scm.com/downloads
 
+默认选项点到底，完成后在win菜单中的Git文件夹找到Git Bash，则安装完成。
 
 ### Linux安装Git
 
+较新版本的Debian和Ubuntu系统可以直接使用命令行 $ sudo apt-get install git 完成安装
 
+较老版本的则使用  $ sudo apt-get install git-core 命令
 
 ### Macos安装Git
 
-
+打开你的App Store，下载（很多人应该已经下载了）Xcode即可，虽然Xcode集成了Git，不过默认没有安装。运行Xcode后，选择菜单“Xcode”->“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”即可。
 
 ### Git文件配置
 
