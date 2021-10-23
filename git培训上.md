@@ -25,7 +25,7 @@
 
 以上问题除了第五条外，**均可通过百度、谷歌或者请教同学**获得答案。
 
-（关于Git和GitHub的介绍，如果你想浅显的了解，我会建议你去看看廖雪峰老师的网站，说的很清楚。如果你是顶尖大佬，可以自行翻翻CSDN和一些书籍给自己一个满意的回答）
+（关于Git和GitHub的介绍，如果你想浅显的了解，不妨去看看廖雪峰老师的网站。在本教程之中遇到的任何不理解或者陌生的名词和说法，**请先试试百度和谷歌知不知道**）
 
 ## Git介绍
 
@@ -41,11 +41,15 @@
 
 在命令行输入$ git, 如果你已经安装过了，就直接跳到工作流程部分吧！
 
+
+
 ### Windows安装Git
 
 直接利用Git官网的下载链接：https://git-scm.com/downloads
 
 默认选项点到底，完成后在win菜单中的Git文件夹找到Git Bash，则安装完成。
+
+
 
 ### Linux安装Git
 
@@ -53,9 +57,13 @@
 
 较老版本的则使用  $ sudo apt-get install git-core 命令
 
+
+
 ### Macos安装Git
 
 打开你的App Store，下载（很多人应该已经下载了）Xcode即可，虽然Xcode集成了Git，不过默认没有安装。运行Xcode后，选择菜单“Xcode”->“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”即可。
+
+
 
 ### Git文件配置
 
@@ -68,15 +76,52 @@
 
 ## Git工作流程
 
+​		在讲解之前，我们希望你了解两个问题：
+
+首先注意，版本控制系统只跟踪文本文件，无法真正跟随图片和视频这些二进制文件的改动，所以我们只讲解文本文件的操作方法。（建议所以的文本编码方式全部采用UTF-8编码，比较普适）
+
+其次注意，本教程默认你的工作环境是Windows，而我们非常不建议你使用Windows记事本来编写txt文件，由于内部编码规则的改变，记事本将会带来各种编译上的错误（微软确实喜欢整这种花活），所以，试试VSCode吧。
+
 ### 创建仓库
 
+​		所谓仓库（版本库：repository），其实就是一个独立于你在电脑视窗所看到的文件夹的一个“隐藏文件夹”。这个隐藏的版本库被Git管理，它里面所有文件都被Git跟踪，所以十分方便每个人看到做了什么修改，并且随时还原版本。那么现在，我们就来说说如何在本地创建一个版本库：
 
+首先，在你想要创建版本库的目录下进入bash,输入如下命令行：（路径请不要出现中文!!!)
+
+```bash
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/Git Files/learngit
+```
+
+/Users/Git Files/learngit也就是当前目录的位置，我们成功创建了一个新目录，接下来就是让Git接管这个目录（或者你可以理解为接管这个文件夹）
+
+输入git init:
+
+```bash
+$ git init
+Initialized empty Git repository in /Users/Git Files/learngit/.git/
+```
+
+此时，当前目录出现了一个被默认隐藏的文件夹（防止你手欠把它删了）叫做.git，这个目录下就是git所管理的repository，一般情况下对我们来说是不可见的，但我们的确创建成功了。
 
 ### 基本操作
 
 **git clone**、**git push**、**git add** 、**git commit**、**git checkout**、**git pull**
 
 讲讲这些基本流程就行
+
+###### 接下来我们将文件添加到版本库中保存：
+
+在learngit目录新建一个叫做readme.md（当然你可以选择txt文件或是各种你喜欢的文件类型）的文件，然后使用VSCode写入：
+
+```
+Git is a version control system.
+Git is free software.
+```
+
+
 
 ### 分支管理 
 
